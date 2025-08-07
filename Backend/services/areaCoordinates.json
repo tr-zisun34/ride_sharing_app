@@ -1,0 +1,34 @@
+{
+  "cities": [
+    {
+      "name": "Manhattan",
+      "areas": [
+        {
+          "name": "Upper East Side",
+          "lat": 40.7736,
+          "lng": -73.9566
+        },
+        {
+          "name": "Harlem",
+          "lat": 40.8116,
+          "lng": -73.9465
+        }
+      ]
+    },
+    {
+      "name": "Brooklyn",
+      "areas": [
+        {
+          "name": "Williamsburg",
+          "lat": 40.7081,
+          "lng": -73.9571
+        },
+        {
+          "name": "Bushwick",
+          "lat": 40.6958,
+          "lng": -73.9171
+        }
+      ]
+    }
+  ]
+}
