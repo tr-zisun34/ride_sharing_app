@@ -195,11 +195,7 @@ const CaptainHome = () => {
             const response = await axios.post(`${import.meta.env.VITE_BASE_URL}/rides/confirm`, {
                 rideId: ride._id,
                 captainId: captain._id,
-            }, {
-                headers: {
-                    Authorization: `Bearer ${localStorage.getItem('token')}`
-                }
-            })
+            });
 
             setRidePopupPanel(false)
             setConfirmRidePopupPanel(true)
@@ -304,6 +300,7 @@ const CaptainHome = () => {
             <div ref={ridePopupPanelRef} className='fixed w-full z-10 bottom-0 translate-y-full bg-white px-3 py-10 pt-12'>
                 <RidePopUp
                     ride={ride}
+                    captain={captain}
                     setRidePopupPanel={setRidePopupPanel}
                     setConfirmRidePopupPanel={setConfirmRidePopupPanel}
                     confirmRide={confirmRide}
@@ -314,6 +311,7 @@ const CaptainHome = () => {
             <div ref={confirmRidePopupPanelRef} className='fixed w-full h-screen z-10 bottom-0 translate-y-full bg-white px-3 py-10 pt-12'>
                 <ConfirmRidePopUp
                     ride={ride}
+                    captain={captain}
                     setConfirmRidePopupPanel={setConfirmRidePopupPanel}
                     setRidePopupPanel={setRidePopupPanel}
                 />

@@ -115,6 +115,7 @@ module.exports.authCaptain = async (req, res, next) => {
     const captain = await captainModel.findById(decoded._id);
 
     if (!captain) {
+      console.error(`Captain not found for ID: ${decoded._id}`);
       return res.status(401).json({ message: 'Captain not found' });
     }
 
